@@ -1,0 +1,61 @@
+<ion-side-menus>
+
+  <ion-pane ion-side-menu-content>
+    <ion-nav-bar class="bar-positive nav-title-slide-ios7">
+      <ion-nav-back-button class="button-clear"><i class="icon ion-ios7-arrow-back"></i> Voltar</ion-nav-back-button>
+    </ion-nav-bar>
+    <ion-nav-view name="menuContent" animation="slide-left-right"></ion-nav-view>
+      
+  <!-- <ion-nav-buttons side="right">
+    <button nav-clear menu-close menu-toggle="right" class="button button-icon icon ion-log-out" ng-click="sair()"></button>
+  </ion-nav-buttons> -->
+      
+      
+    
+  </ion-pane>
+
+  <ion-side-menu side="left">
+    <header class="bar bar-header bar-dark">
+      <h1 class="title">Opções</h1>
+    </header>
+    <ion-content class="has-header">
+      <ion-list>
+        <!-- <ion-item nav-clear menu-close ng-click="login()">
+          Pesquisar
+        </ion-item> -->
+        <ion-item nav-clear menu-close href="#/app/search">
+            <i class="ion-search"></i>
+          Pesquisar
+        </ion-item>
+        <ion-item nav-clear menu-close href="#/app/usuario">
+             <i class="ion-document"></i>
+          Cadastro Usuário
+        </ion-item>
+        <ion-item nav-clear menu-close href="#/app/medico">
+             <i class="ion-clipboard"></i>
+          Cadastro Médico
+        </ion-item>
+          <ion-item nav-clear menu-close href="#/app/consultorio">
+              <i class="ion-ios7-medkit-outline"></i>
+          Cadastro Consultório
+        </ion-item>
+        <ion-item nav-clear menu-close href="#/app/relatorios">
+             <i class="ion-ios7-pie-outline"></i>
+          Relatórios
+        </ion-item>
+        <ion-item nav-clear menu-close href="#/app/privacidade">
+             <i class="ion-ios7-locked-outline"></i>
+              Termos de Privacidade
+        </ion-item>
+        <ion-item nav-clear menu-close href="#/app/fale">
+             <i class="ion-ios7-telephone-outline"></i>
+              Fale Conosco
+        </ion-item>
+        <ion-item nav-clear menu-close href="#/app/sobre">
+             <i class="ion-information-circled"></i>
+              Sobre
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>

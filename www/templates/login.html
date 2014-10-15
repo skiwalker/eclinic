@@ -1,0 +1,19 @@
+<ion-view title="eClinic">
+    <ion-content>
+      <div class="list">
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Usuário</span>
+          <input type="text" ng-model="user.username">
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Senha</span>
+          <input type="password" ng-model="user.password">
+        </label>
+      </div>
+      <div class="padding" align="center">
+        <button nav-clear class="button button-block button-positive" ng-click="LogIn(user)">Entrar</button>
+        <a class="button button-clear button-positive" href="#/app/cadastreSe">Cadastra-se</a><br />
+        <a class="button button-clear button-positive" href="#/app/esqueciSenha">Esqueci a senha</a>
+      </div>
+    </ion-content>
+</ion-view>
