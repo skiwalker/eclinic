@@ -37,6 +37,16 @@ angular.module('starter', ['ionic', 'starter.controllers'])
           templateUrl: "templates/search.html",
           controller: 'serarchCtrl'
         }
+      },
+    })
+  
+  .state('app.clinicas', {
+      url: "/clinicas:idClinica",
+      views: {
+        'menuContent' :{
+          templateUrl: "templates/clinicas.html",
+          controller: 'clinicasCtrl'
+        }
       }
     })
   

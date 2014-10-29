@@ -1,5 +1,5 @@
 <ion-view title="eClinic">
-    
+<form>    
   <ion-nav-buttons side="left">
     <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
   </ion-nav-buttons>
@@ -9,45 +9,33 @@
   </ion-nav-buttons>
     
   <ion-content class="has-header">
-    <h1>Pesquisar</h1>
+    <!-- <h1>Pesquisar</h1> -->
+      
+    <div class="button-bar">
+      <a class="button" ng-click="faixa('a')">A-D</a>
+      <a class="button" ng-click="faixa('e')">E-H</a>
+      <a class="button" ng-click="faixa('i')">I-N</a>
+      <a class="button" ng-click="faixa('o')">O-U</a>
+    </div>
       
     <div class="list">
-
-      <form>
-        <div class="item item-input-inset">
-        <label class="item-input-wrapper">
-          <i class="icon ion-search placeholder-icon"></i>
-          <input type="text" placeholder="ex: Cardiologista" ng-model="especialidade.nome">
-        </label>
-        <button class="button button-small" ng-click="pesquisar(especialidade)">
-          Pesquisar
-        </button>
-             
-        <a class="button button-small button-positive" href="#/app/filtros">Filtros</a>
-      </div>
-     </form>
         
+        <ion-radio ng-repeat="esp in especialidadesMedicas" ng-model="especialidadeTypes.defaultId" value="{{esp.esp_id}}">
+            {{esp.esp_nome}}
+        </ion-radio>
         
-        <!--<ion-list>
-            <ion-item ng-repeat="consultorio in consultorios" href="#/app/playlists/{{playlist.id}}">
-                {{consultorio.titulo}}
-            </ion-item>
-        </ion-list> -->
+        <!-- <div class="item">
+          <pre ng-bind="consultorios | json"></pre> 
+        </div> -->
         
-        <div class="list">
-
-            <a ng-repeat="consultorio in consultorios" class="item item-avatar" href="#/app/playlists/{{consultorio.cli_id}}">
-              <img src="img/{{consultorio.cli_logo}}">
-              <h2>{{consultorio.cli_nome}}</h2>
-              <p>{{consultorio.cli_endereco}} - {{consultorio.cli_bairro}}</p>
-            </a>
-
-        </div>
-
-
     </div>
 
     
   </ion-content>
     
+    <div class="bar bar-footer bar-positive">
+        <button class="button icon-left ion-ios7-settings button-clear"></button>
+        <button class="button icon-right ion-ios7-search button-clear" ng-click="pesquisar()"></button>
+    </div>
+</form>  
 </ion-view>
