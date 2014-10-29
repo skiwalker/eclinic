@@ -202,11 +202,7 @@ angular.module('starter.controllers', [])
 
 
 
-
-
-
-function LoginCtrl($scope,$state,$ionicModal,$http,$ionicSideMenuDelegate,$ionicPopup,$ionicLoading,$ionicViewService)
-{
+.controller('LoginCtrl', function($scope,$state,$ionicModal,$http,$ionicSideMenuDelegate,$ionicPopup,$ionicLoading,$ionicViewService){
     
     $ionicSideMenuDelegate.canDragContent(false); //Desabilita o menu slide
     
@@ -256,16 +252,13 @@ function LoginCtrl($scope,$state,$ionicModal,$http,$ionicSideMenuDelegate,$ionic
         //$state.go('app.search');
         //$ionicSideMenuDelegate.canDragContent(true);
     }
-}
+})
 
-function cadastreSeCtrl()
-{
-    
-}
+.controller('cadastreSeCtrl', function(){
+})
 
-function esqueciSenhaCtrl()
-{
-    
-}
+.controller('esqueciSenhaCtrl', function(){
+})
+
 
 
